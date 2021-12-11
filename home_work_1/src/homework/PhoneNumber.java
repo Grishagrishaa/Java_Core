@@ -1,6 +1,6 @@
 package homework;
 
-public class Phone_number {
+public class PhoneNumber {
     public static void main(String[] args) {
         int[] array = {3, 7, 5, 2, 9, 9, 8, 0, 2, 3, 5, 7};
         System.out.println(createPhoneNumber(array));
