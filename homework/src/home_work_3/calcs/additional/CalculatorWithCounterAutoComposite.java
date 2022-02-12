@@ -16,37 +16,31 @@ public class CalculatorWithCounterAutoComposite implements ICalculator {
         return countOperation;
     }
 
-    @Override
     public float division(float dividend, float divisor) {
         incrementCountOperation();
         return calculator.division(dividend,divisor);
     }
 
-    @Override
     public float multiplication(float multiplier1, float multiplier2) {
         incrementCountOperation();
         return calculator.multiplication(multiplier1,multiplier2);
     }
 
-    @Override
     public float addition(float... nums) {
         incrementCountOperation();
         return calculator.addition(nums);
     }
 
-    @Override
     public float exponentiation(float num, int degree) {
         incrementCountOperation();
         return calculator.exponentiation(num,degree);
     }
 
-    @Override
     public float abs(int number) {
         incrementCountOperation();
         return calculator.abs(number);
     }
 
-    @Override
     public float root(int rootMeaning) {
         incrementCountOperation();
         return calculator.root(rootMeaning);
