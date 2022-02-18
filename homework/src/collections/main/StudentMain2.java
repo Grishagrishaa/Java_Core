@@ -11,7 +11,9 @@ public class StudentMain2 {
         Random rnd = new Random();
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < 10_000 ; i++) {
-            Student student  = new Student(rnd.nextInt(50000),createRealName(), rnd.nextInt(7,17),rnd.nextDouble(0.0,10.0),rnd.nextBoolean());
+            Student student  = new Student(rnd.nextInt(50000),createRealName(),
+                    rnd.nextInt(7,17),rnd.nextFloat(10),
+                    rnd.nextBoolean());
             studentList.add(student);
         }
         System.out.println(studentList);
