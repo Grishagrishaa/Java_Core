@@ -34,7 +34,7 @@ public class Service {
     }
 
     public List<Student> ageMarkFilter(List<Student> list){
-        List<Student> ageMarkSort = new ArrayList<>(list);
+        List<Student> ageMarkSort = new ArrayList<>(list);//Это копия, отдельный список
         //ageSort.sort(new AgeComparator());
         ageMarkSort.removeIf(student -> student.getAge() < 12);//фильтр по возрасту (3 задание)
         ageMarkSort.removeIf(student -> student.getMark() < 8);//фильтр по оценке (3 задание)

@@ -24,7 +24,7 @@ public class StudentMain3 {
         //Лист с объектами студентов
 
         for (int i = 0; i <10_000 ; i++) {
-            students.add(new Student(rnd.nextInt(9999),namesList.get(rnd.nextInt(namesList.size())),
+            students.add(new Student(i,namesList.get(rnd.nextInt(namesList.size())),
                     rnd.nextInt(7,18), rnd.nextFloat(10), rnd.nextBoolean() ));
         }
         //Цикл заполнения листа студентами с использованием класса Random

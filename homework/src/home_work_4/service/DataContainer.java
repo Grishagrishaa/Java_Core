@@ -4,13 +4,14 @@ import home_work_4.comparators.MyNullComparator;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class DataContainer <T extends Comparable<T>> {
     private T[] data;
     public DataContainer (T[] data){
         this.data = data;
     }
-    public DataContainer (){}
+    //public DataContainer (){}
 
     public int add(T item){
         if(item == null){
@@ -41,6 +42,7 @@ public class DataContainer <T extends Comparable<T>> {
     }
 
     public boolean delete (int index){
+
         try{
             data[index] = null;
             Arrays.sort(data, new MyNullComparator());
@@ -52,11 +54,8 @@ public class DataContainer <T extends Comparable<T>> {
     }
     public boolean delete (T item){
         for (int i = 0; i < data.length; i++) {
-            if(data[i] == item){
-                data[i] = null;
-                Arrays.sort(data, new MyNullComparator());
-                data = Arrays.copyOf(data,data.length -1);
-                return true;
+            if(Objects.equals(item,data[i])){
+                return delete(i);
             }
         }
         return false;

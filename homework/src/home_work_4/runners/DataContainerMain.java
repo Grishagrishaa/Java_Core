@@ -4,7 +4,7 @@ import home_work_4.service.DataContainer;
 
 public class DataContainerMain {
     public static void main(String[] args) {
-        DataContainer<String> data = new DataContainer<String>( new String[10]);
+        DataContainer<String> data = new DataContainer<String>( new String[0]);
 
         System.out.println("____________________ПОПЫТКА НЕКОРРЕКТНОЙ ВСТАВКИ____________");
         System.out.println(data.add(null));// Элемент вставить нельзя, возвращает -1
